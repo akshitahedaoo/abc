@@ -11,23 +11,11 @@ public class abcservice implements abcserviceinterface{
 		ad=new abcdao();
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	//No need to use main function here
 	
 	public int createprofileservice(abcuser au) {
 		// TODO Auto-generated method stub
 		int i=ad.createprofiledao(au);
 		return i;
-		
-		
-		
 	}
-	public void createprofileservice() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-
 }

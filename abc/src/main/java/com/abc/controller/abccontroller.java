@@ -10,50 +10,44 @@ import com.abc.service.abcserviceinterface;
 
 public class abccontroller implements abccontrollerinterface {
 	private abcserviceinterface as;
+	
 	public abccontroller() {
 		as=new abcservice();
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	//No need to add a main function here
 
-	}
 
+
+	@Override
 	public void createprofile() throws Exception {
 		// TODO Auto-generated method stub
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("enter name");
 		String name=br.readLine();
-		
+
 		System.out.println("enter email");
 		String email=br.readLine();
-		
+
 		System.out.println("enter password");
 		String password=br.readLine();
-		
+
 		System.out.println("enter address");
 		String address=br.readLine();
+		//Created a new entity for user and filled its value
 		abcuser au=new abcuser();
 		au.setName(name);
 		au.setEmail(email);
 		au.setPassword(password);
 		au.setAddress(address);
-		abccontrollerinterface ci=new abccontroller();
-		int i=ci.createprofileservice(au);
+		
+		int i = as.createprofileservice(au);
+		
 		if(i>0) {
 			System.out.println("created");
 		}
 		else {
 			System.out.println("not created");
 		}
-		
-		
 	}
-
-	public int createprofileservice(abcuser iu) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

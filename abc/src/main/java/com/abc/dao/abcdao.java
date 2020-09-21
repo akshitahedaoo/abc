@@ -7,6 +7,8 @@ import com.abc.entity.abcuser;
 
 public class abcdao implements abcdaointerface{
 
+	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -22,8 +24,7 @@ public class abcdao implements abcdaointerface{
 		a.setPassword(au.getPassword());
 		a.setAddress(au.getAddress());
 		System.out.println("hello");
-		
-		
+		ll.add(a);
 
 		int i=ll.size();
 
@@ -35,10 +36,4 @@ public class abcdao implements abcdaointerface{
 		}
 		
 	}
-
-	public int createprofiledao() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
